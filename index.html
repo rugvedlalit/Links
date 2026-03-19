@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rugved Lalit | Links</title>
+    <title>Rugved Lalit | Portfolio & Links</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
         :root {
             --text-primary: #ffffff;
             --btn-border: #ffffff;
-            /* Adjust the 0.6 below to 0.1 to make the top clearer, or 0.9 to make it darker */
-            --bg-overlay: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,1) 85%);
+            /* Adjust the 0.3 below to make the top clearer, or 0.8 to make it darker */
+            --bg-overlay: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,1) 80%);
         }
 
         * { box-sizing: border-box; }
@@ -25,9 +25,7 @@
             color: var(--text-primary);
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             text-align: center;
-
             /* BACKGROUND IMAGE SETTINGS */
-            /* Ensure your image is named 'background.png' and is in the same folder */
             background: var(--bg-overlay), url('IMG_4508.JPG.jpeg');
             background-size: cover;
             background-position: center top;
@@ -44,11 +42,10 @@
             border: 2px solid rgba(255, 255, 255, 0.2);
             box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
             margin-bottom: 20px;
-            /* If profile image fails, it shows a dark circle */
             background-color: #111; 
         }
 
-        h1 { font-size: 1.8rem; margin: 0; font-weight: 700; text-shadow: 2px 2px 10px rgba(0,0,0,0.5); }
+        h1 { font-size: 1.8rem; margin: 0; font-weight: 700; }
         .subtitle { font-size: 0.9rem; margin-top: 10px; opacity: 0.9; letter-spacing: 0.5px; }
 
         /* 2. Social Icons */
@@ -65,10 +62,7 @@
             transition: transform 0.2s, opacity 0.2s;
         }
 
-        .social-icons a:hover {
-            opacity: 0.8;
-            transform: scale(1.1);
-        }
+        .social-icons a:hover { opacity: 0.8; transform: scale(1.1); }
 
         /* 3. Tagline */
         .tagline {
@@ -77,16 +71,15 @@
             font-weight: 600;
             line-height: 1.4;
             margin-bottom: 50px;
-            text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
         }
 
-        /* 4. The 3D Buttons */
-        .container { width: 100%; max-width: 400px; }
+        /* 4. The 3D Buttons Container */
+        .link-container { width: 100%; max-width: 400px; }
 
         .link-card {
             display: block;
             background: rgba(0, 0, 0, 0.4);
-            backdrop-filter: blur(10px); /* Makes buttons look premium */
+            backdrop-filter: blur(10px);
             border: 2px solid var(--btn-border);
             border-radius: 60px;
             padding: 18px;
@@ -94,11 +87,9 @@
             text-decoration: none;
             color: white;
             transition: all 0.1s ease;
-            /* Sharp 3D Shadow */
             box-shadow: 6px 6px 0px rgba(255, 255, 255, 0.9);
         }
 
-        /* Click/Hover Animation */
         .link-card:active {
             transform: translate(4px, 4px);
             box-shadow: 2px 2px 0px white;
@@ -106,12 +97,55 @@
 
         .btn-title { display: block; font-weight: 800; font-size: 1.05rem; text-transform: uppercase; }
         .btn-sub { display: block; font-size: 0.75rem; margin-top: 5px; opacity: 0.8; letter-spacing: 1px; }
+
+        /* 5. Portfolio Grid Section */
+        .portfolio-section {
+            width: 100%;
+            max-width: 450px;
+            margin-top: 50px;
+        }
+
+        .section-title {
+            font-size: 1.4rem;
+            font-weight: 800;
+            margin-bottom: 25px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            padding-bottom: 60px;
+        }
+
+        .grid-item {
+            text-decoration: none;
+            color: white;
+            transition: transform 0.2s ease;
+        }
+
+        .grid-item:hover { transform: translateY(-5px); }
+
+        .grid-img {
+            width: 100%;
+            aspect-ratio: 16 / 11;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 8px;
+            background-color: #222;
+        }
+
+        .grid-text {
+            font-size: 0.8rem;
+            font-weight: 700;
+            line-height: 1.3;
+            display: block;
+        }
     </style>
 </head>
 <body>
 
     <img src="IMG_4516.PNG" alt="Rugved Lalit" class="profile-img">
-
     <h1>Rugved Lalit</h1>
     <div class="subtitle">Entrepreneur | Creator | Editor</div>
 
@@ -126,7 +160,7 @@
         Building brands. Creating Stories.<br>Designing my own life.
     </div>
 
-    <div class="container">
+    <div class="link-container">
         <a href="https://www.instagram.com/tho.th_co.in?igsh=NzNxNm5xdGg5NnZs" class="link-card">
             <span class="btn-title">THOTH</span>
             <span class="btn-sub">GRAPHICS | POST - PRODUCTION</span>
@@ -143,5 +177,29 @@
         </a>
     </div>
 
+    <div class="portfolio-section">
+        <h2 class="section-title">My Links List</h2>
+        <div class="grid-container">
+            <a href="LINK_1" class="grid-item">
+                <img src="project1.png" class="grid-img" alt="Mitti">
+                <span class="grid-text">Mitti - Concept Design</span>
+            </a>
+            <a href="LINK_2" class="grid-item">
+                <img src="project2.png" class="grid-img" alt="Thoth">
+                <span class="grid-text">Thoth - Branding</span>
+            </a>
+            <a href="LINK_3" class="grid-item">
+                <img src="project3.png" class="grid-img" alt="Vynqe">
+                <span class="grid-text">Vynqe - Visual Identity</span>
+            </a>
+            <a href="LINK_4" class="grid-item">
+                <img src="project4.png" class="grid-img" alt="Ti">
+                <span class="grid-text">Ti - Logo Design & Identity</span>
+            </a>
+        </div>
+    </div>
+
 </body>
 </html>
+
+                
