@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rugved Lalit | Links</title>
+    <style>
+        :root {
+            --bg-color: #000000;
+            --text-primary: #ffffff;
+            --accent-glow: rgba(255, 69, 0, 0.6); /* Reddish glow */
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 50px 20px;
+            margin: 0;
+        }
+
+        /* Profile Section */
+        .profile-img {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            object-fit: cover;
+            /* Creates that red aura from your image */
+            box-shadow: 0 0 40px 10px var(--accent-glow);
+            margin-bottom: 20px;
+        }
+
+        h1 { font-size: 1.6rem; margin: 0; font-weight: 700; }
+        .subtitle { font-size: 0.85rem; margin-top: 8px; opacity: 0.9; letter-spacing: 0.5px; }
+
+        .tagline {
+            max-width: 280px;
+            text-align: center;
+            font-size: 1rem;
+            font-weight: 600;
+            margin: 40px 0;
+            line-height: 1.4;
+        }
+
+        /* The Link Buttons */
+        .container { width: 100%; max-width: 400px; }
+
+        .link-card {
+            display: block;
+            background: transparent;
+            border: 2px solid #ffffff;
+            border-radius: 60px; /* Stadium shape */
+            padding: 18px;
+            margin-bottom: 22px;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            transition: all 0.2s ease;
+            /* The 3D shadow effect from your photo */
+            box-shadow: 6px 6px 0px rgba(255, 255, 255, 0.9);
+        }
+
+        /* Hover/Click Effect */
+        .link-card:active {
+            transform: translate(4px, 4px);
+            box-shadow: 2px 2px 0px white;
+        }
+
+        .btn-title { display: block; font-weight: 800; font-size: 1rem; text-transform: uppercase; }
+        .btn-sub { display: block; font-size: 0.7rem; margin-top: 4px; opacity: 0.7; letter-spacing: 1px; }
+    </style>
+</head>
+<body>
+
+    <img src="YOUR_IMAGE_URL_HERE.jpg" alt="Profile" class="profile-img">
+
+    <h1>Rugved Lalit</h1>
+    <div class="subtitle">Entrepreneur | Creator | Editor</div>
+
+    <div class="tagline">
+        Building brands. Creating Stories. Designing my own life.
+    </div>
+
+    <div class="container">
+        <a href="https://www.instagram.com/tho.th_co.in?igsh=NzNxNm5xdGg5NnZs" class="link-card" target="_blank">
+            <span class="btn-title">THOTH</span>
+            <span class="btn-sub">GRAPHICS | POST - PRODUCTION</span>
+        </a>
+
+        <a href="https://www.instagram.com/maharajchaiwala.station?igsh=MXR5eHRqdWh1YzU4YQ==" class="link-card" target="_blank">
+            <span class="btn-title">MAHARAJ CHAI</span>
+            <span class="btn-sub">BUSINESS</span>
+        </a>
+
+        <a href="https://www.instagram.com/cozwhynot.experience?igsh=cm85b3N2aG51Zndv" class="link-card" target="_blank">
+            <span class="btn-title">COZ WHY NOT</span>
+            <span class="btn-sub">CURATING EXPERIENCE</span>
+        </a>
+    </div>
+
+</body>
+</html>
