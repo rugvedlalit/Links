@@ -6,96 +6,130 @@
     <title>Rugved Lalit | Links</title>
     <style>
         :root {
-            --bg-color: #000000;
             --text-primary: #ffffff;
-            --accent-glow: rgba(255, 69, 0, 0.6); /* Reddish glow */
+            --button-border: #ffffff;
+            /* Defines the dramatic lighting from the original image:
+               A sharp crimson core, fading quickly to a muted maroon,
+               and finally transitioning to total black at the bottom.
+            */
+            --bg-effect: radial-gradient(
+                circle at 50% 120px, 
+                #f00 0%, 
+                #aa0000 150px, 
+                #1a0000 300px, 
+                #000000 100%
+            );
         }
 
+        /* Essential for ensuring the black fade covers the whole screen */
+        html, body { height: 100%; margin: 0; }
+
         body {
-            background-color: var(--bg-color);
+            /* This applies the dramatic lighting background from the original image */
+            background: #000000;
+            background-image: var(--bg-effect);
+            background-repeat: no-repeat;
+            
             color: var(--text-primary);
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             display: flex;
             flex-direction: column;
             align-items: center;
             padding: 50px 20px;
-            margin: 0;
         }
 
-        /* Profile Section */
+        /* 1. Profile Section with Updated Lighting */
+        .profile-container {
+            text-align: center;
+            margin-bottom: 30px;
+            /* Positions the profile elements relatively so they sit correctly 
+               in front of the gradient's focus. */
+            position: relative; 
+            z-index: 2;
+        }
+
         .profile-img {
-            width: 110px;
-            height: 110px;
+            width: 120px;
+            height: 120px;
             border-radius: 50%;
             object-fit: cover;
-            /* Creates that red aura from your image */
-            box-shadow: 0 0 40px 10px var(--accent-glow);
+            /* A soft glow around the image itself, matching the dramatic background.
+               Using high-saturation crimson.
+            */
+            box-shadow: 0 0 45px rgba(255, 0, 0, 0.7);
             margin-bottom: 20px;
         }
 
-        h1 { font-size: 1.6rem; margin: 0; font-weight: 700; }
+        h1 { font-size: 1.7rem; margin: 0; font-weight: 700; }
         .subtitle { font-size: 0.85rem; margin-top: 8px; opacity: 0.9; letter-spacing: 0.5px; }
 
+        /* 2. Text / Tagline Section */
         .tagline {
-            max-width: 280px;
+            max-width: 290px;
             text-align: center;
             font-size: 1rem;
             font-weight: 600;
-            margin: 40px 0;
-            line-height: 1.4;
+            margin: 35px 0 45px;
+            line-height: 1.45;
+            position: relative;
+            z-index: 2;
         }
 
-        /* The Link Buttons */
+        /* 3. The Custom Button Area */
         .container { width: 100%; max-width: 400px; }
 
         .link-card {
             display: block;
             background: transparent;
-            border: 2px solid #ffffff;
-            border-radius: 60px; /* Stadium shape */
+            border: 2px solid var(--button-border);
+            border-radius: 60px; /* Stadium/Pill shape */
             padding: 18px;
-            margin-bottom: 22px;
+            margin-bottom: 25px;
             text-align: center;
             text-decoration: none;
             color: white;
             transition: all 0.2s ease;
-            /* The 3D shadow effect from your photo */
+            
+            /* The definitive "stacked" or "3D hard shadow" look from the photo.
+               We use a high-opacity white shadow with 0px blur.
+            */
             box-shadow: 6px 6px 0px rgba(255, 255, 255, 0.9);
         }
 
-        /* Hover/Click Effect */
-        .link-card:active {
+        /* Active/Hover State: simulates the button being pressed down */
+        .link-card:active, .link-card:hover {
             transform: translate(4px, 4px);
             box-shadow: 2px 2px 0px white;
         }
 
         .btn-title { display: block; font-weight: 800; font-size: 1rem; text-transform: uppercase; }
-        .btn-sub { display: block; font-size: 0.7rem; margin-top: 4px; opacity: 0.7; letter-spacing: 1px; }
+        .btn-sub { display: block; font-size: 0.72rem; margin-top: 4px; opacity: 0.75; letter-spacing: 1px; }
     </style>
 </head>
 <body>
 
-    <img src="YOUR_IMAGE_URL_HERE.jpg" alt="Profile" class="profile-img">
-
-    <h1>Rugved Lalit</h1>
-    <div class="subtitle">Entrepreneur | Creator | Editor</div>
+    <div class="profile-container">
+        <img src="YOUR_PROFILE_PHOTO.jpg" alt="Profile" class="profile-img">
+        <h1>Rugved Lalit</h1>
+        <div class="subtitle">Entrepreneur | Creator | Editor</div>
+    </div>
 
     <div class="tagline">
         Building brands. Creating Stories. Designing my own life.
     </div>
 
     <div class="container">
-        <a href="https://www.instagram.com/tho.th_co.in?igsh=NzNxNm5xdGg5NnZs" class="link-card" target="_blank">
+        <a href="https://your-thoth-link.com" class="link-card" target="_blank">
             <span class="btn-title">THOTH</span>
             <span class="btn-sub">GRAPHICS | POST - PRODUCTION</span>
         </a>
 
-        <a href="https://www.instagram.com/maharajchaiwala.station?igsh=MXR5eHRqdWh1YzU4YQ==" class="link-card" target="_blank">
+        <a href="https://your-chai-link.com" class="link-card" target="_blank">
             <span class="btn-title">MAHARAJ CHAI</span>
             <span class="btn-sub">BUSINESS</span>
         </a>
 
-        <a href="https://www.instagram.com/cozwhynot.experience?igsh=cm85b3N2aG51Zndv" class="link-card" target="_blank">
+        <a href="https://your-cozwhynot-link.com" class="link-card" target="_blank">
             <span class="btn-title">COZ WHY NOT</span>
             <span class="btn-sub">CURATING EXPERIENCE</span>
         </a>
