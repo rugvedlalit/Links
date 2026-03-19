@@ -4,132 +4,121 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rugved Lalit | Links</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
         :root {
             --text-primary: #ffffff;
-            --button-border: #ffffff;
-            /* Defines the dramatic lighting from the original image:
-               A sharp crimson core, fading quickly to a muted maroon,
-               and finally transitioning to total black at the bottom.
-            */
-            --bg-effect: radial-gradient(
-                circle at 50% 120px, 
-                #f00 0%, 
-                #aa0000 150px, 
-                #1a0000 300px, 
-                #000000 100%
-            );
+            --bg-effect: radial-gradient(circle at 50% 100px, #b30000 0%, #4a0000 30%, #000000 100%);
         }
 
-        /* Essential for ensuring the black fade covers the whole screen */
-        html, body { height: 100%; margin: 0; }
-
         body {
-            /* This applies the dramatic lighting background from the original image */
             background: #000000;
             background-image: var(--bg-effect);
-            background-repeat: no-repeat;
-            
+            background-attachment: fixed;
             color: var(--text-primary);
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 50px 20px;
+            padding: 60px 20px;
+            margin: 0;
         }
 
-        /* 1. Profile Section with Updated Lighting */
-        .profile-container {
-            text-align: center;
-            margin-bottom: 30px;
-            /* Positions the profile elements relatively so they sit correctly 
-               in front of the gradient's focus. */
-            position: relative; 
-            z-index: 2;
-        }
-
+        /* Profile Image Fix */
         .profile-img {
-            width: 120px;
-            height: 120px;
+            width: 110px;
+            height: 110px;
             border-radius: 50%;
             object-fit: cover;
-            /* A soft glow around the image itself, matching the dramatic background.
-               Using high-saturation crimson.
-            */
-            box-shadow: 0 0 45px rgba(255, 0, 0, 0.7);
+            border: 2px solid rgba(255,255,255,0.2);
+            box-shadow: 0 0 30px rgba(255, 0, 0, 0.6);
             margin-bottom: 20px;
+            background-color: #222; /* Placeholder color if image fails */
         }
 
-        h1 { font-size: 1.7rem; margin: 0; font-weight: 700; }
-        .subtitle { font-size: 0.85rem; margin-top: 8px; opacity: 0.9; letter-spacing: 0.5px; }
+        h1 { font-size: 1.8rem; margin: 0; font-weight: 700; }
+        .subtitle { font-size: 0.9rem; margin-top: 8px; opacity: 0.8; }
 
-        /* 2. Text / Tagline Section */
+        /* Social Icons Styles */
+        .social-icons {
+            display: flex;
+            gap: 25px;
+            margin: 25px 0;
+            font-size: 1.5rem;
+        }
+
+        .social-icons a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        .social-icons a:hover { opacity: 0.7; }
+
         .tagline {
-            max-width: 290px;
+            max-width: 300px;
             text-align: center;
-            font-size: 1rem;
+            font-size: 1.1rem;
             font-weight: 600;
-            margin: 35px 0 45px;
-            line-height: 1.45;
-            position: relative;
-            z-index: 2;
+            margin-bottom: 40px;
+            line-height: 1.4;
         }
 
-        /* 3. The Custom Button Area */
+        /* Buttons */
         .container { width: 100%; max-width: 400px; }
 
         .link-card {
             display: block;
-            background: transparent;
-            border: 2px solid var(--button-border);
-            border-radius: 60px; /* Stadium/Pill shape */
-            padding: 18px;
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(5px);
+            border: 2px solid white;
+            border-radius: 50px;
+            padding: 16px;
             margin-bottom: 25px;
             text-align: center;
             text-decoration: none;
             color: white;
-            transition: all 0.2s ease;
-            
-            /* The definitive "stacked" or "3D hard shadow" look from the photo.
-               We use a high-opacity white shadow with 0px blur.
-            */
-            box-shadow: 6px 6px 0px rgba(255, 255, 255, 0.9);
+            box-shadow: 6px 6px 0px white;
+            transition: 0.2s;
         }
 
-        /* Active/Hover State: simulates the button being pressed down */
-        .link-card:active, .link-card:hover {
+        .link-card:active {
             transform: translate(4px, 4px);
             box-shadow: 2px 2px 0px white;
         }
 
         .btn-title { display: block; font-weight: 800; font-size: 1rem; text-transform: uppercase; }
-        .btn-sub { display: block; font-size: 0.72rem; margin-top: 4px; opacity: 0.75; letter-spacing: 1px; }
+        .btn-sub { display: block; font-size: 0.7rem; margin-top: 4px; opacity: 0.7; }
     </style>
 </head>
 <body>
 
-    <div class="profile-container">
-        <img src="C:\Users\Rugved\Downloads\IMG_4516.PNG" alt="Profile" class="profile-img">
-        <h1>Rugved Lalit</h1>
-        <div class="subtitle">Entrepreneur | Creator | Editor</div>
+    <img src="profile.jpg" alt="Rugved Lalit" class="profile-img" onerror="this.src='https://ui-avatars.com/api/?name=Rugved+Lalit&background=333&color=fff'">
+
+    <h1>Rugved Lalit</h1>
+    <div class="subtitle">Entrepreneur | Creator | Editor</div>
+
+    <div class="social-icons">
+        <a href="https://www.instagram.com/rugvedlalit?igsh=MWh1YnlpZGdxMHFheQ%3D%3D&utm_source=qr" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.behance.net/rugvedlalica0e" target="_blank"><i class="fa-brands fa-behance"></i></a>
+        <a href="mailto:rugvedlalit2000@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+        <a href="https://wa.me/8356032026" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
     </div>
 
     <div class="tagline">
-        Building brands. Creating Stories. Designing my own life.
+        Building brands. Creating Stories.<br>Designing my own life.
     </div>
 
     <div class="container">
-        <a href="https://your-thoth-link.com" class="link-card" target="_blank">
+        <a href="#" class="link-card">
             <span class="btn-title">THOTH</span>
             <span class="btn-sub">GRAPHICS | POST - PRODUCTION</span>
         </a>
-
-        <a href="https://your-chai-link.com" class="link-card" target="_blank">
+        <a href="#" class="link-card">
             <span class="btn-title">MAHARAJ CHAI</span>
             <span class="btn-sub">BUSINESS</span>
         </a>
-
-        <a href="https://your-cozwhynot-link.com" class="link-card" target="_blank">
+        <a href="#" class="link-card">
             <span class="btn-title">COZ WHY NOT</span>
             <span class="btn-sub">CURATING EXPERIENCE</span>
         </a>
